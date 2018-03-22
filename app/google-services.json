@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "445180574842",
+    "firebase_url": "https://snapr-8318a.firebaseio.com",
+    "project_id": "snapr-8318a",
+    "storage_bucket": "snapr-8318a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445180574842:android:81406a837e89ddfa",
+        "android_client_info": {
+          "package_name": "com.udemy.sbsapps.snapr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445180574842-quhocv8da8hgr3picotflgr36o7fpqj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC63CPRET5MggdGxt1ZqZIZPEl9pwlWGwM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
