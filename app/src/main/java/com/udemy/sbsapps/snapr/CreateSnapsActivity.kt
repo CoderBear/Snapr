@@ -30,6 +30,8 @@ class CreateSnapsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_snaps)
+
+        message = findViewById(R.id.editText)
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
@@ -82,13 +84,19 @@ class CreateSnapsActivity : AppCompatActivity() {
         bitmap?.compress(Bitmap.CompressFormat.JPEG, 100, baos)
         val data = baos.toByteArray()
 
-        val uploadTask = FirebaseStorage.getInstance().getReference().child("images").child(imageName).putBytes(data)
+        val uploadTask = storage.getReference().child("images").child(imageName).putBytes(data)
         uploadTask.addOnFailureListener(OnFailureListener {
             // Handle unsuccessful uploads
         }).addOnSuccessListener(OnSuccessListener<UploadTask.TaskSnapshot> { taskSnapshot ->
             // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
             val downloadUrl = taskSnapshot.downloadUrl
             Log.i("URL", downloadUrl.toString())
+
+            val intent = Intent(this, ChooseUserActivity::class.java)
+            intent.putExtra("imageURL", downloadUrl.toString())
+            intent.putExtra("imageName", imageName)
+            intent.putExtra("message", message?.text.toString())
+            startActivity(intent)
         })
     }
 }
