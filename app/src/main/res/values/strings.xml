@@ -7,4 +7,5 @@
     <string name="choose_image_text">Choose Image</string>
     <string name="message_hint">Message</string>
     <string name="next_text">Next</string>
+    <string name="snap_image">snap image</string>
 </resources>
