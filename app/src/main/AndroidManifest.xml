@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SnapsActivity"></activity>
+        <activity android:name=".SnapsActivity" />
+        <activity android:name=".CreateSnapsActivity"></activity>
     </application>
 
 </manifest>

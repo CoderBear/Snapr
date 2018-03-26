@@ -3,4 +3,8 @@
     <string name="password_hint">Password</string>
     <string name="email_hint">Email</string>
     <string name="go_button_string">Go</string>
+    <string name="placeholder_image">placeholder image</string>
+    <string name="choose_image_text">Choose Image</string>
+    <string name="message_hint">Message</string>
+    <string name="next_text">Next</string>
 </resources>
